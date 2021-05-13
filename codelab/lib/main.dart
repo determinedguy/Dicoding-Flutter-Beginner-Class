@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Wisata Bandung',
       theme: ThemeData(),
       home: MainScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
