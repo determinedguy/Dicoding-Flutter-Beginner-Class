@@ -24,7 +24,11 @@ class MainScreen extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     flex: 1,
-                    child: Image.asset(place.imageAsset),
+                    //child: Image.asset(place.imageAsset),
+                    child: Hero(
+                      tag: 'image_'+place.name,
+                      child: Image.asset(place.imageAsset),
+                    ),
                   ),
                   Expanded(
                     flex: 2,
