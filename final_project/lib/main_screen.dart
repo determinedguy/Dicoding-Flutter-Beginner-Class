@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:final_project/about_me.dart';
+import 'package:final_project/motivation_screen.dart';
 
 class MainScreen extends StatelessWidget {
   @override

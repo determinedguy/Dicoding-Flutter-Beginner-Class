@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutMeScreen extends StatelessWidget {
+class MotivationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return;
