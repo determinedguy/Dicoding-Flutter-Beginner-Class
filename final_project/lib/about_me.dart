@@ -13,114 +13,110 @@ class AboutMeScreen extends StatelessWidget {
         title: const Text('About Me'),
       ),
       body: Center(
-        child: Column(
-          children: <Widget>[
-            // Add space between AppBar with details by Padding
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-            ),
-            // Insert the photo profile
-            Stack(
-              children: <Widget>[
-                Positioned(
-                  child: CircleAvatar(
-                    radius: 100,
-                    backgroundImage: AssetImage('images/about_me/photo.jpg'),
-                  ),
-                )
-              ],
-            ),
-            // Add space between photo with texts by Padding
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-            ),
-            // Full name details
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 130,
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              // Insert the photo profile
+              CircleAvatar(
+                maxRadius: 100,
+                backgroundImage: AssetImage('images/about_me/photo.jpg'),
               ),
-              child: AutoSizeText(
-                'Muhammad Athallah',
-                style: TextStyle(
-                  fontSize: 50.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                minFontSize: 20.0,
-                maxLines: 1,
+              // Add space between photo with texts by Padding
+              Padding(
+                padding: const EdgeInsets.all(8.0),
               ),
-            ),
-            // Add space between photo with texts by Padding
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-            ),
-            // Description details
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
+              // Full name details
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 130,
+                ),
+                child: AutoSizeText(
+                  'Muhammad Athallah',
+                  style: TextStyle(
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  minFontSize: 20.0,
+                  maxLines: 1,
+                ),
               ),
-              child: AutoSizeText(
-                'Hello, I am Athallah. I am an undergraduate student at the Faculty of Computer Science, University of Indonesia. I am majoring in Computer Science, currently seeking to explore software engineering, web development, and mobile development.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30.0,
-                  color: Colors.black,
-                ),
-                minFontSize: 15.0,
-                maxLines: 4,
+              // Add space between photo with texts by Padding
+              Padding(
+                padding: const EdgeInsets.all(8.0),
               ),
-            ),
-            // Add space between texts with social media details by Padding
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                ElevatedButton(
-                  child: Icon(FontAwesomeIcons.facebook),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.lightGreen,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  ),
-                  onPressed: () {
-                    launch('https://www.facebook.com/mhdathallah.id/');
-                  },
+              // Description details
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
                 ),
-                ElevatedButton(
-                  child: Icon(FontAwesomeIcons.instagram),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.lightGreen,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                child: AutoSizeText(
+                  'Hello, I am Athallah. I am an undergraduate student at the Faculty of Computer Science, University of Indonesia. I am majoring in Computer Science, currently seeking to explore software engineering, web development, and mobile development.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.black,
                   ),
-                  onPressed: () {
-                    launch('https://www.instagram.com/mhd.athallah/');
-                  },
+                  minFontSize: 15.0,
+                  maxLines: 4,
                 ),
-                ElevatedButton(
-                  child: Icon(FontAwesomeIcons.twitter),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.lightGreen,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              ),
+              // Add space between texts with social media details by Padding
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton(
+                    child: Icon(FontAwesomeIcons.facebook),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.lightGreen,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    ),
+                    onPressed: () {
+                      launch('https://www.facebook.com/mhdathallah.id/');
+                    },
                   ),
-                  onPressed: () {
-                    launch('https://www.twitter.com/mhd_athallah/');
-                  },
-                ),
-                ElevatedButton(
-                  child: Icon(FontAwesomeIcons.envelope),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.lightGreen,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  ElevatedButton(
+                    child: Icon(FontAwesomeIcons.instagram),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.lightGreen,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    ),
+                    onPressed: () {
+                      launch('https://www.instagram.com/mhd.athallah/');
+                    },
                   ),
-                  onPressed: () {
-                    launch(
-                        Uri.encodeFull('mailto:muhammad.athallah01@ui.ac.id'));
-                  },
-                ),
-              ],
-            ),
-          ],
+                  ElevatedButton(
+                    child: Icon(FontAwesomeIcons.twitter),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.lightGreen,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    ),
+                    onPressed: () {
+                      launch('https://www.twitter.com/mhd_athallah/');
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Icon(FontAwesomeIcons.envelope),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.lightGreen,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    ),
+                    onPressed: () {
+                      launch(Uri.encodeFull(
+                          'mailto:muhammad.athallah01@ui.ac.id'));
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
