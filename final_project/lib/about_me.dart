@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AboutMeScreen extends StatelessWidget {
@@ -30,34 +31,48 @@ class AboutMeScreen extends StatelessWidget {
               ],
             ),
             // Add space between photo with texts by Padding
-            Padding(padding: const EdgeInsets.all(8.0)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+            ),
             // Full name details
-            RichText(
-              text: TextSpan(
-                text: 'Muhammad Athallah',
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 130,
+              ),
+              child: AutoSizeText(
+                'Muhammad Athallah',
                 style: TextStyle(
+                  fontSize: 50.0,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
                   color: Colors.black,
                 ),
+                minFontSize: 20.0,
+                maxLines: 1,
               ),
             ),
             // Add space between photo with texts by Padding
-            Padding(padding: const EdgeInsets.all(8.0)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+            ),
             // Description details
-            RichText(
-              text: TextSpan(
-                text: 'Hello, I am Athallah. I am an undergraduate student at the Faculty of Computer Science, University of Indonesia. I am majoring in Computer Science, currently seeking to explore software engineering, web development, and mobile development.',
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: AutoSizeText(
+                'Hello, I am Athallah. I am an undergraduate student at the Faculty of Computer Science, University of Indonesia. I am majoring in Computer Science, currently seeking to explore software engineering, web development, and mobile development.',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15.0,
+                  fontSize: 30.0,
                   color: Colors.black,
                 ),
+                minFontSize: 15.0,
+                maxLines: 4,
               ),
-              textAlign: TextAlign.center,
             ),
             // Add space between texts with social media details by Padding
             Padding(
-              padding: const EdgeInsets.all(15.0)
+              padding: const EdgeInsets.all(15.0),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +114,8 @@ class AboutMeScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                   ),
                   onPressed: () {
-                    launch(Uri.encodeFull('mailto:muhammad.athallah01@ui.ac.id'));
+                    launch(
+                        Uri.encodeFull('mailto:muhammad.athallah01@ui.ac.id'));
                   },
                 ),
               ],
