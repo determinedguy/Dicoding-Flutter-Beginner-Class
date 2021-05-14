@@ -1,4 +1,4 @@
-# final_project
+# Get Up and Go!
 
 This is my final project for Dicoding Indonesia's class of "Belajar Membuat Aplikasi Flutter untuk Pemula".
 
