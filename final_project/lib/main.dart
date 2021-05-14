@@ -8,7 +8,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Get Up and Go!',
-      theme: ThemeData(),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.lightGreen,
+        accentColor: Colors.black87,
+      ),
       home: MainScreen(),
     );
   }
