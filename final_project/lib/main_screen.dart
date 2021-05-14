@@ -51,43 +51,34 @@ class _InputMobileState extends State<InputMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(
-                hintText: 'Ketik namamu disini :)',
-                labelText: 'Nama',
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                controller: _controller,
+                decoration: InputDecoration(
+                  hintText: 'Ketik namamu disini :)',
+                  labelText: 'Nama',
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              child: Text('Motivate Yourself!'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.lightGreen,
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              ),
-              /*
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        content: Text('Hello, ${_controller.text}'),
-                      );
-                    });
-              },
-              */
-              onPressed: () {
-                name = _controller.text;
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return MotivationScreen(name: name);
-                }));
-              },
-            )
-          ],
+              SizedBox(height: 20),
+              ElevatedButton(
+                child: Text('Motivate Yourself!'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.lightGreen,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                ),
+                onPressed: () {
+                  name = _controller.text;
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return MotivationScreen(name: name);
+                  }));
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
