@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,10 +11,11 @@ class AboutMeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text(
+        title: Text(
           'About Me',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
+            fontSize: 25.0,
           ),
         ),
       ),
@@ -37,7 +39,7 @@ class AboutMeScreen extends StatelessWidget {
                 ),
                 child: AutoSizeText(
                   'Muhammad Athallah',
-                  style: TextStyle(
+                  style: GoogleFonts.nunito(
                     fontSize: 50.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -58,7 +60,7 @@ class AboutMeScreen extends StatelessWidget {
                 child: AutoSizeText(
                   'Hello, I am Athallah. I am an undergraduate student at the Faculty of Computer Science, University of Indonesia. I am majoring in Computer Science, currently seeking to explore software engineering, web development, and mobile development.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: GoogleFonts.nunito(
                     fontSize: 30.0,
                     color: Colors.black,
                   ),

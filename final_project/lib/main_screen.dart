@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:final_project/about_me.dart';
 import 'package:final_project/motivation_screen.dart';
@@ -12,8 +13,9 @@ class MainScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           'Get Up and Go!',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
+            fontSize: 25.0,
           ),
         ),
         actions: <Widget>[
@@ -89,9 +91,8 @@ class _InputMobileState extends State<InputMobile> {
                 child: AutoSizeText(
                   'Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto Instagramable.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: GoogleFonts.nunito(
                     fontSize: 20.0,
-                    //fontFamily: 'Oxygen',
                   ),
                   minFontSize: 13.0,
                   maxLines: 4,

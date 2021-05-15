@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MotivationScreen extends StatelessWidget {
   final String name;
@@ -21,9 +22,8 @@ class MotivationScreen extends StatelessWidget {
               child: Text(
                 'Halo, ${this.name}.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.nunito(
                   fontSize: 16.0,
-                  //fontFamily: 'Oxygen',
                 ),
               ),
             ),

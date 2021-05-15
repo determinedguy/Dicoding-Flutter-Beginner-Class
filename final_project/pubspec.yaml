@@ -38,6 +38,9 @@ dependencies:
   # The following adds the AutoSizeText plugin.
   auto_size_text: ^2.1.0
 
+  # The following adds the Google Fonts plugin.
+  google_fonts: ^2.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
