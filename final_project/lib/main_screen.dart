@@ -73,11 +73,11 @@ class _InputMobileState extends State<InputMobile> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 200,
+                  horizontal: 180,
                 ),
                 child: AutoSizeText(
                   'Halo!',
-                  style: TextStyle(
+                  style: GoogleFonts.nunito(
                     fontSize: 40.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -89,7 +89,7 @@ class _InputMobileState extends State<InputMobile> {
               Container(
                 padding: EdgeInsets.all(16.0),
                 child: AutoSizeText(
-                  'Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto Instagramable.',
+                  'Intinya, lu masukkin nama lu terus gua kasih meme pakai kalimat yang isinya ada nama lu. Pusing gua mikir kata-katanya, duh.',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.nunito(
                     fontSize: 20.0,
