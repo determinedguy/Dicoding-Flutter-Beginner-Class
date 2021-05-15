@@ -10,7 +10,12 @@ class AboutMeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text('About Me'),
+        title: const Text(
+          'About Me',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Center(
         child: SingleChildScrollView(
