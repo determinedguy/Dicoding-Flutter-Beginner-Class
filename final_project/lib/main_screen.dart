@@ -34,25 +34,19 @@ class MainScreen extends StatelessWidget {
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          return InputMobile();
-          /*if (constraints.maxWidth <= 600) {
-            return InputMobile();
-          }
-          else {
-            return InputWeb();
-          }*/
-        },
+          return InputScreen();
+        }
       ),
     );
   }
 }
 
-class InputMobile extends StatefulWidget {
+class InputScreen extends StatefulWidget {
   @override
-  _InputMobileState createState() => _InputMobileState();
+  _InputScreenState createState() => _InputScreenState();
 }
 
-class _InputMobileState extends State<InputMobile> {
+class _InputScreenState extends State<InputScreen> {
   TextEditingController _controller = TextEditingController();
   String name;
 
@@ -76,7 +70,7 @@ class _InputMobileState extends State<InputMobile> {
                   horizontal: 180,
                 ),
                 child: AutoSizeText(
-                  'Halo!',
+                  'Hello!',
                   style: GoogleFonts.nunito(
                     fontSize: 40.0,
                     fontWeight: FontWeight.bold,
@@ -89,7 +83,7 @@ class _InputMobileState extends State<InputMobile> {
               Container(
                 padding: EdgeInsets.all(16.0),
                 child: AutoSizeText(
-                  'Intinya, lu masukkin nama lu terus gua kasih meme pakai kalimat yang isinya ada nama lu. Pusing gua mikir kata-katanya, duh.',
+                  'Are you feeling down? Do you feel like you want to surrender your life? Hey, don\'t go anywhere! Type your name (either your full name or your nickname) and let me give you "the thing" you need right now.',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.nunito(
                     fontSize: 20.0,
@@ -101,7 +95,7 @@ class _InputMobileState extends State<InputMobile> {
               TextField(
                 controller: _controller,
                 decoration: InputDecoration(
-                  hintText: 'Ketik namamu disini :)',
+                  hintText: 'Type your name here :)',
                   labelText: 'Nama',
                 ),
               ),
@@ -132,12 +126,3 @@ class _InputMobileState extends State<InputMobile> {
     super.dispose();
   }
 }
-
-/*
-class InputWeb extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return;
-  }
-}
-*/
