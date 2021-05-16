@@ -1,11 +1,11 @@
 {
-    "name": "final_project",
+    "name": "Get Up and Go!",
     "short_name": "final_project",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Athal's final project for Dicoding Indonesia's class of \"Belajar Membuat Aplikasi Flutter untuk Pemula\".",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
