@@ -67,7 +67,7 @@ class _InputScreenState extends State<InputScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 180,
+                  horizontal: 140,
                 ),
                 child: AutoSizeText(
                   'Hello!',
@@ -76,7 +76,7 @@ class _InputScreenState extends State<InputScreen> {
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
-                  minFontSize: 17.0,
+                  minFontSize: 20.0,
                   maxLines: 1,
                 ),
               ),
