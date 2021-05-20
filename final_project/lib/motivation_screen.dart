@@ -148,6 +148,7 @@ class MotivationScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(25),
+
                 child: Image.asset('images/motivation_screen/7.jpg'),
               ),
             ),

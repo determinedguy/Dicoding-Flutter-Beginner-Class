@@ -44,7 +44,7 @@ class AboutMeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
-                  minFontSize: 20.0,
+                  minFontSize: 17.0,
                   maxLines: 1,
                 ),
               ),
