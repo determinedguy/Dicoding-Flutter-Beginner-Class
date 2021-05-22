@@ -35,7 +35,7 @@ class AboutMeScreen extends StatelessWidget {
               // Full name details
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 130,
+                  horizontal: 100,
                 ),
                 child: AutoSizeText(
                   'Muhammad Athallah',
@@ -44,7 +44,7 @@ class AboutMeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
-                  minFontSize: 17.0,
+                  minFontSize: 15.0,
                   maxLines: 1,
                 ),
               ),
@@ -64,7 +64,7 @@ class AboutMeScreen extends StatelessWidget {
                     fontSize: 30.0,
                     color: Colors.black,
                   ),
-                  minFontSize: 15.0,
+                  minFontSize: 13.0,
                   maxLines: 4,
                 ),
               ),
