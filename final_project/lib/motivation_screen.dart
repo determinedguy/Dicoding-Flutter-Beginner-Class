@@ -27,7 +27,7 @@ class MotivationScreen extends StatelessWidget {
                   fontSize: 30.0,
                 ),
                 minFontSize: 16.0,
-                maxLines: 1,
+                maxLines: 2,
               ),
             ),
             Padding(
