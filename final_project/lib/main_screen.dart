@@ -33,10 +33,9 @@ class MainScreen extends StatelessWidget {
         ],
       ),
       body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          return InputScreen();
-        }
-      ),
+          builder: (BuildContext context, BoxConstraints constraints) {
+        return InputScreen();
+      }),
     );
   }
 }
@@ -47,8 +46,7 @@ class InputScreen extends StatefulWidget {
 }
 
 class _InputScreenState extends State<InputScreen> {
-  TextEditingController _controller = TextEditingController();
-  String name;
+  String _name = '';
 
   @override
   Widget build(BuildContext context) {
@@ -93,11 +91,15 @@ class _InputScreenState extends State<InputScreen> {
                 ),
               ),
               TextField(
-                controller: _controller,
                 decoration: InputDecoration(
                   hintText: 'Type your name here :)',
                   labelText: 'Nama',
                 ),
+                onChanged: (String value) {
+                  setState(() {
+                    _name = value;
+                  });
+                },
               ),
               SizedBox(height: 20),
               ElevatedButton(
@@ -107,9 +109,8 @@ class _InputScreenState extends State<InputScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 ),
                 onPressed: () {
-                  name = _controller.text;
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return MotivationScreen(name: name);
+                    return MotivationScreen(name: _name);
                   }));
                 },
               )
@@ -118,11 +119,5 @@ class _InputScreenState extends State<InputScreen> {
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 }
